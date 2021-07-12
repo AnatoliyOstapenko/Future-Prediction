@@ -53,6 +53,9 @@
                                                                 <state key="normal" title="Button" backgroundImage="QuizButton">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgr-6C-DE3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -70,6 +73,9 @@
                                                                 <state key="normal" title="Button" backgroundImage="QuizButton">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8FC-rd-iaV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -105,6 +111,11 @@
                             <constraint firstItem="I0m-ea-R4X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nxX-Ia-wP9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomButton" destination="uH3-M1-dtQ" id="ex9-gh-RWi"/>
+                        <outlet property="topButton" destination="nfh-Ca-K9R" id="Tlt-Io-rD0"/>
+                        <outlet property="topLabel" destination="vzZ-6g-Gxj" id="1Af-LF-UzH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
