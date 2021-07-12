@@ -39,12 +39,12 @@ You bond with the murderer while crooning verses of "Can you feel the love tonig
     ]
     
     // set func to check user answer from View with answer in Model
-    mutating func checkAnswer(answer userAnswer: String) {
-        if userAnswer == question[questionNumber].choiceOne {
+    mutating func checkAnswer(answer currentAnswer: String) {
+        if currentAnswer == question[questionNumber].choiceOne {
             questionNumber += n
             n += 1
             
-        } else if userAnswer == question[questionNumber].choiceTwo {
+        } else if currentAnswer == question[questionNumber].choiceTwo {
             questionNumber += questionNumber
         }
     }
