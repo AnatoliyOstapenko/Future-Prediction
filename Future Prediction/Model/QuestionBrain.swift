@@ -5,13 +5,14 @@
 //  Created by MacBook on 12.07.2021.
 //
 
-import Foundation
+import UIKit
 
 struct QuestionBrain {
     
     var questionNumber = 0
     var n = 2
-    
+    var b = 1
+
     
     let question = [
         Question(story: """
@@ -21,7 +22,9 @@ Your car has blown a tire on a winding road in the middle of nowhere with no cel
         He nods slowly, unphased by the question.
         """, choiceOne: "At least he's honest. I'll climb in.", choiceTwo: "Wait, I know how to change a tire."),
         Question(story: """
-You bond with the murderer while crooning verses of "Can you feel the love tonight". He drops you off at the next town. Before you go he asks you if you know any good places to dump bodies. You reply: "Try the pier.
+As you begin to drive, the stranger starts talking about his relationship with his mother. He gets angrier and
+ angrier by the minute. He asks you to open the glove box. Inside you find a bloody knife, two severed fingers, and
+ a cassette tape of Elton John. He reaches for the glove box
 """, choiceOne: "I love Elton John! Hand him the cassette tape.", choiceTwo: "It’s him or me. Take the knife and stab him."),
         Question(story: """
         What? Such a cop-out! Did you know accidental traffic accidents are the second leading cause of
@@ -38,16 +41,57 @@ You bond with the murderer while crooning verses of "Can you feel the love tonig
         """, choiceOne: "The", choiceTwo: "End")
     ]
     
-    // set func to check user answer from View with answer in Model
-    mutating func checkAnswer(answer currentAnswer: String) {
-        if currentAnswer == question[questionNumber].choiceOne {
-            questionNumber += n
-            n += 1
-            
-        } else if currentAnswer == question[questionNumber].choiceTwo {
-            questionNumber += questionNumber
+    
+    mutating func checkAnswer() {
+        
+        switch question[questionNumber].choiceOne {
+        case "I'll hop in. Thanks for the help!":
+            questionNumber = 2
+        case "I love Elton John! Hand him the cassette tape.":
+            questionNumber = 5
+        default:
+            questionNumber = 0
+        }
+        
+        switch question[questionNumber].choiceTwo {
+        case "Well, I don't have many options. Better ask him if he's a murderer":
+            questionNumber = 1
+        case "Wait, I know how to change a tire.":
+            questionNumber = 3
+        default:
+            questionNumber = 0
         }
     }
+    
+    
+    
+    // set func to check user answer from View with answer in Model
+//    mutating func checkAnswer(answer currentAnswer: String) {
+//        if b < 3 && n < 4 {
+//            if currentAnswer == question[questionNumber].choiceOne {
+//                questionNumber += n
+//                n += 1
+//
+//                print("choice 1 question number \(questionNumber)")
+//                print("n: \(n)")
+//
+//            } else if currentAnswer == question[questionNumber].choiceTwo {
+//                questionNumber += b
+//                b += 1
+//                print("choise 2 question number \(questionNumber)")
+//                print("b: \(b)")
+//            }
+//
+//        } else {
+//            questionNumber = 0
+//            n = 2
+//            b = 0
+//            print("else question number \(questionNumber)")
+//            print("n: \(n)")
+//            print("b: \(b)")
+//        }
+//
+//    }
     // get a story from array above
     func getQuestion() -> String {
         return question[questionNumber].story
