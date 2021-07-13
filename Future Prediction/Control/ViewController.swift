@@ -7,12 +7,14 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
     
     //initialized QuestionBrain struct from Model
     var questionBrain = QuestionBrain()
     
-    
+    var sound = Sound()
     
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var topButton: UIButton!
@@ -21,6 +23,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // align text in button adding constraint left and right 20px around text
+        topButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        bottomButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        
+        
         // Do any additional setup after loading the view.
         updateUI()
     }
@@ -38,7 +45,8 @@ class ViewController: UIViewController {
         
         // trigger updateUI func block
         updateUI()
-        
+        // play sound F.wav
+        sound.playSound()
         
     }
     func updateUI() {
@@ -48,7 +56,9 @@ class ViewController: UIViewController {
         // transfer next answer options from QuestionBrain to buttons
         topButton.setTitle(questionBrain.getChoiceOne(), for: .normal)
         bottomButton.setTitle(questionBrain.getChoiceTwo(), for: .normal)
+        
     }
+    
     
 }
 

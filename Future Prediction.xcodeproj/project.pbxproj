@@ -16,6 +16,8 @@
 		FA022A87269B627700834ACF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA022A86269B627700834ACF /* README.md */; };
 		FA022A8D269CC4DF00834ACF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA022A8C269CC4DF00834ACF /* Question.swift */; };
 		FA022A92269CC66B00834ACF /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA022A91269CC66B00834ACF /* QuestionBrain.swift */; };
+		FA38EA79269DE9F9002D789D /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38EA78269DE9F9002D789D /* Sound.swift */; };
+		FA38EA81269DEE19002D789D /* Future prediction sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA38EA80269DEE19002D789D /* Future prediction sound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FA022A86269B627700834ACF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA022A8C269CC4DF00834ACF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FA022A91269CC66B00834ACF /* QuestionBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
+		FA38EA78269DE9F9002D789D /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		FA38EA80269DEE19002D789D /* Future prediction sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Future prediction sound.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				FA022A8A269CC07200834ACF /* View */,
 				FA022A89269C9F1A00834ACF /* Control */,
 				FA022A7A269B5A9300834ACF /* Assets.xcassets */,
+				FA38EA7B269DEB81002D789D /* Sound */,
 				FA022A7C269B5A9300834ACF /* LaunchScreen.storyboard */,
 				FA022A7F269B5A9300834ACF /* Info.plist */,
 			);
@@ -96,8 +101,17 @@
 			children = (
 				FA022A8C269CC4DF00834ACF /* Question.swift */,
 				FA022A91269CC66B00834ACF /* QuestionBrain.swift */,
+				FA38EA78269DE9F9002D789D /* Sound.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA38EA7B269DEB81002D789D /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				FA38EA80269DEE19002D789D /* Future prediction sound.wav */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +173,7 @@
 			files = (
 				FA022A7E269B5A9300834ACF /* LaunchScreen.storyboard in Resources */,
 				FA022A7B269B5A9300834ACF /* Assets.xcassets in Resources */,
+				FA38EA81269DEE19002D789D /* Future prediction sound.wav in Resources */,
 				FA022A87269B627700834ACF /* README.md in Resources */,
 				FA022A79269B5A8E00834ACF /* Main.storyboard in Resources */,
 			);
@@ -172,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA022A76269B5A8E00834ACF /* ViewController.swift in Sources */,
+				FA38EA79269DE9F9002D789D /* Sound.swift in Sources */,
 				FA022A8D269CC4DF00834ACF /* Question.swift in Sources */,
 				FA022A72269B5A8E00834ACF /* AppDelegate.swift in Sources */,
 				FA022A92269CC66B00834ACF /* QuestionBrain.swift in Sources */,

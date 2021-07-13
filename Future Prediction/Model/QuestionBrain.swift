@@ -10,9 +10,6 @@ import UIKit
 struct QuestionBrain {
     
     var questionNumber = 0
-    var n = 2
-    var b = 1
-
     
     let question = [
         Question(story: """
@@ -41,19 +38,15 @@ As you begin to drive, the stranger starts talking about his relationship with h
         """, choiceOne: "The", choiceTwo: "End")
     ]
     
-    
-    mutating func checkAnswer() {
-        
-        switch question[questionNumber].choiceOne {
+    // set func to check user answer from View with answer in Model
+    mutating func checkAnswer(answer currentAnswer: String) {
+     
+        // switch loop to toggle to specific question number depending on reply chosen
+        switch currentAnswer {
         case "I'll hop in. Thanks for the help!":
             questionNumber = 2
         case "I love Elton John! Hand him the cassette tape.":
             questionNumber = 5
-        default:
-            questionNumber = 0
-        }
-        
-        switch question[questionNumber].choiceTwo {
         case "Well, I don't have many options. Better ask him if he's a murderer":
             questionNumber = 1
         case "Wait, I know how to change a tire.":
@@ -63,35 +56,6 @@ As you begin to drive, the stranger starts talking about his relationship with h
         }
     }
     
-    
-    
-    // set func to check user answer from View with answer in Model
-//    mutating func checkAnswer(answer currentAnswer: String) {
-//        if b < 3 && n < 4 {
-//            if currentAnswer == question[questionNumber].choiceOne {
-//                questionNumber += n
-//                n += 1
-//
-//                print("choice 1 question number \(questionNumber)")
-//                print("n: \(n)")
-//
-//            } else if currentAnswer == question[questionNumber].choiceTwo {
-//                questionNumber += b
-//                b += 1
-//                print("choise 2 question number \(questionNumber)")
-//                print("b: \(b)")
-//            }
-//
-//        } else {
-//            questionNumber = 0
-//            n = 2
-//            b = 0
-//            print("else question number \(questionNumber)")
-//            print("n: \(n)")
-//            print("b: \(b)")
-//        }
-//
-//    }
     // get a story from array above
     func getQuestion() -> String {
         return question[questionNumber].story
@@ -104,6 +68,8 @@ As you begin to drive, the stranger starts talking about his relationship with h
     func getChoiceTwo() -> String {
         return question[questionNumber].choiceTwo
     }
+    
+    
     
     
 }
